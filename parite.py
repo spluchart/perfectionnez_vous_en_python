@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import argparse
+
 import analysis.csv, analysis.xml
 
 def parse_arguments():
@@ -12,6 +13,7 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
+    #import pdb; pdb.set_trace() #breakpoint definition
     datafile = args.datafile
     if args.extension == 'csv':
         analysis.csv.launch_analysis(datafile)
